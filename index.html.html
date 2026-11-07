@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raiz Digital Acre — Do produtor ao seu prato</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f7f5ef;--surface:#fff;--text:#1d2b21;--muted:#5b6b5f;--accent:#1f7a45;--accent-text:#fff;--line:#dcd8cb;--soft:#e8f2e9}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101712;--surface:#18221b;--text:#eaf1ea;--muted:#a3b3a6;--accent:#4fc47f;--accent-text:#0b1a10;--line:#2b3a2f;--soft:#1d2d22}}
+:root[data-theme="dark"]{--bg:#101712;--surface:#18221b;--text:#eaf1ea;--muted:#a3b3a6;--accent:#4fc47f;--accent-text:#0b1a10;--line:#2b3a2f;--soft:#1d2d22}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+section{padding:48px 0}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:.3em 0}
+h2{font-size:1.6rem;margin:0 0 8px}
+p.lead{font-size:1.15rem;color:var(--muted);max-width:56ch}
+.tag{display:inline-block;background:var(--soft);color:var(--accent);padding:4px 12px;border-radius:99px;font-size:.85rem;font-weight:600}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+label{display:block;font-weight:600;margin:12px 0 4px;font-size:.92rem}
+input,select{width:100%;padding:11px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:inherit}
+button{margin-top:16px;width:100%;padding:12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-text);font:inherit;font-weight:700;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:18px}
+.grid .card h3{margin:0 0 6px;font-size:1.05rem;color:var(--accent)}
+.grid .card p{margin:0;font-size:.93rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.92rem;background:var(--surface)}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+.dikw{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.dikw div{background:var(--soft);border-left:5px solid var(--accent);padding:10px 14px;border-radius:8px}
+footer{padding:28px 0;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+#thanks{display:none;text-align:center;padding:90px 0}
+body.done #main{display:none}body.done #thanks{display:block}
+.err{color:#c0392b;font-size:.85rem;min-height:1.2em}
+</style>
+</head>
+<body>
+<div class="wrap" id="main">
+
+<section class="hero">
+  <div>
+    <span class="tag">Startup fictícia · Rio Branco, AC</span>
+    <h1>Do produtor da floresta direto ao seu prato.</h1>
+    <p class="lead">A Raiz Digital Acre conecta pequenos produtores acreanos (castanha, açaí, farinha, cupuaçu) a consumidores que valorizam origem, preço justo e sustentabilidade.</p>
+  </div>
+  <form class="card" id="f" novalidate>
+    <h2>Entre na lista de lançamento</h2>
+    <p style="margin:0;color:var(--muted);font-size:.92rem">Receba o aviso quando abrirmos o primeiro pedido.</p>
+    <label for="n">Nome</label><input id="n" name="nome" autocomplete="name">
+    <label for="e">E-mail</label><input id="e" name="email" type="email" autocomplete="email">
+    <label for="p">Você é…</label>
+    <select id="p"><option>Consumidor</option><option>Produtor</option><option>Restaurante/Comércio</option></select>
+    <div class="err" id="err" role="alert"></div>
+    <button type="submit">Quero participar</button>
+  </form>
+</section>
+
+<section>
+  <h2>Nossos valores</h2>
+  <div class="grid">
+    <div class="card"><h3>Preço justo</h3><p>Mais renda para quem produz, transparência para quem compra.</p></div>
+    <div class="card"><h3>Origem rastreável</h3><p>Você sabe quem plantou, colheu e de onde veio.</p></div>
+    <div class="card"><h3>Sustentabilidade</h3><p>Valorizamos o extrativismo e a agricultura familiar da Amazônia.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Esta página é um Sistema de Informação</h2>
+  <p class="lead">Mapeamento dos 5 componentes de SI aplicados a esta landing page.</p>
+  <div class="grid">
+    <div class="card"><h3>1. Dados</h3><p>Nome, e-mail e perfil digitados no formulário; data/hora do cadastro.</p></div>
+    <div class="card"><h3>2. Hardware</h3><p>Servidores em nuvem da hospedagem (Vercel/Netlify), mais celular e computador do visitante e do administrador.</p></div>
+    <div class="card"><h3>3. Software</h3><p>Plataforma no-code/IA usada para criar a página, navegador do usuário e Google Planilhas para guardar os cadastros.</p></div>
+    <div class="card"><h3>4. Processos</h3><p>Ao clicar em “Enviar”: validar campos → salvar o cadastro na planilha/banco → redirecionar para a página “Obrigado!”.</p></div>
+    <div class="card"><h3>5. Pessoas</h3><p>Desenvolvedor/projetista (cria), analista (define requisitos e analisa os cadastros) e visitante (usuário final).</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Pilares DIKW na prática</h2>
+  <div class="dikw">
+    <div><b>Dado:</b> “Maria”, “maria@email.com”, “Consumidor” — valores isolados, sem contexto.</div>
+    <div><b>Informação:</b> 120 cadastros na semana, 70% consumidores, 20% produtores, 10% comércio.</div>
+    <div><b>Conhecimento:</b> a procura vem de consumidores, mas faltam produtores para atender; é preciso captar mais produtores.</div>
+    <div><b>Sabedoria:</b> decidir lançar primeiro nos bairros com mais produtores cadastrados e ajustar a campanha para atraí-los antes de abrir as vendas.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Ferramentas escolhidas</h2>
+  <div class="scroll"><table>
+    <tr><th>Ferramenta</th><th>Uso no projeto</th><th>Justificativa</th></tr>
+    <tr><td>Lovable / Readdy</td><td>Gerar e ajustar o layout da landing com IA</td><td>Rapidez na prototipação, sem código</td></tr>
+    <tr><td>Google Forms</td><td>Receber e armazenar os cadastros</td><td>Gratuito, integra formulário e planilha</td></tr>
+    <tr><td>Vercel</td><td>Hospedagem e domínio gratuito (.vercel.app)</td><td>Publicação simples e HTTPS incluído</td></tr>
+    <tr><td>Canva</td><td>Logotipo e imagens</td><td>Identidade visual fácil de produzir</td></tr>
+    <tr><td>Gamma AI</td><td>Slides da apresentação final</td><td>Gera apresentação a partir do conteúdo</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>Desafios e soluções</h2>
+  <div class="grid">
+    <div class="card"><h3>Guardar os dados</h3><p>Plataformas gratuitas limitam backend. Solução: integrar o formulário a uma planilha do Google.</p></div>
+    <div class="card"><h3>Foco do visitante</h3><p>Muitos links dispersam. Solução: um único objetivo (cadastro) e nenhum link externo.</p></div>
+    <div class="card"><h3>Acesso pelo celular</h3><p>Boa parte do público usa celular. Solução: layout responsivo e formulário curto.</p></div>
+  </div>
+</section>
+
+<footer>© 2026 Raiz Digital Acre — projeto fictício para a disciplina Gestão da Informação (UFAC/CCET). Aluno(a): ____________________</footer>
+</div>
+
+<div class="wrap" id="thanks">
+  <h1>Obrigado!</h1>
+  <p class="lead" style="margin:0 auto">Seu cadastro foi recebido. Avisaremos você por e-mail no lançamento.</p>
+  <p><a href="#" id="back" style="color:var(--accent)">Voltar</a></p>
+</div>
+
+<script>
+(function(){
+  var f=document.getElementById('f'),err=document.getElementById('err');
+  function sync(){document.body.classList.toggle('done',location.hash==='#obrigado')}
+  window.addEventListener('hashchange',sync);sync();
+  document.getElementById('back').addEventListener('click',function(e){e.preventDefault();location.hash='';history.replaceState(null,'',location.pathname+location.search);sync()});
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=f.nome.value.trim(),m=f.email.value.trim();
+    if(!n){err.textContent='Informe seu nome.';return}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){err.textContent='Informe um e-mail válido.';return}
+    err.textContent='';
+    try{
+      var l=JSON.parse(localStorage.getItem('cadastros')||'[]');
+      l.push({nome:n,email:m,perfil:document.getElementById('p').value,data:new Date().toISOString()});
+      localStorage.setItem('cadastros',JSON.stringify(l));
+    }catch(x){}
+    f.reset();location.hash='obrigado';
+  });
+})();
+</script>
+</body>
+</html>
